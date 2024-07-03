@@ -7,35 +7,35 @@ const cards = [
   {
     id: 1,
     content: "React do zero a maestria",
-    bgImage: "src/assets/courseImg/Design sem nome (7).png",
+    bgImage: "src/img/courseImg/Design sem nome (7).png",
     certLink:
       "https://udemy-certificate.s3.amazonaws.com/pdf/UC-38629c02-e169-4eda-9bb9-4e5fd37dfe05.pdf",
   },
   {
     id: 2,
     content: "Rocketseat: Trilha Especializar",
-    bgImage: "src/assets/courseImg/Design sem nome (8).png",
+    bgImage: "src/img/courseImg/Design sem nome (8).png",
     certLink:
       "https://app.rocketseat.com.br/certificates/56fb502b-aa76-4987-955b-e00b9dca104c",
   },
   {
     id: 3,
     content: "Rocketseat: Trilha Fundamentar",
-    bgImage: "src/assets/courseImg/Design sem nome (9).png",
+    bgImage: "src/img/courseImg/Design sem nome (9).png",
     certLink:
       "https://app.rocketseat.com.br/certificates/491eab86-0197-4241-8edf-0dbc146dd78d",
   },
   {
     id: 4,
     content: "Rocketseat: Trilha Conectar",
-    bgImage: "src/assets/courseImg/Design sem nome (10).png",
+    bgImage: "src/img/courseImg/Design sem nome (10).png",
     certLink:
       "https://app.rocketseat.com.br/certificates/130b27e4-d41b-4dc0-9a53-90936506f487",
   },
   {
     id: 5,
     content: "React Native: do zero ao avançado",
-    bgImage: "src/assets/courseImg/React Native.png",
+    bgImage: "src/img/courseImg/React Native.png",
     certLink:
       "https://www.udemy.com/certificate/UC-4ded12d6-05bc-4c98-a08f-c97e76951046/",
   },

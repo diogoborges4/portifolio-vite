@@ -40,47 +40,47 @@ const BtnDrawer = () => {
               <div className=" flex flex-wrap mt-4">
                 <img
                   className=" w-8 h-8 my-3 mx-4"
-                  src="src\assets\logos\c-.png"
+                  src="src\img\logos\c-.png"
                   alt="c#"
                 />
                 <img
                   className=" w-8 h-8 my-3 mx-4"
-                  src="src\assets\logos\css3.png"
+                  src="src\img\logos\css3.png"
                   alt="css"
                 />
                 <img
                   className=" w-8 h-8 my-3 mx-4"
-                  src="src\assets\logos\Design_sem_nome-removebg-preview.png"
+                  src="src\img\logos\Design_sem_nome-removebg-preview.png"
                   alt="vite"
                 />
                 <img
                   className=" w-8 h-8 my-3 mx-4"
-                  src="src\assets\logos\html-5.png"
+                  src="src\img\logos\html-5.png"
                   alt="html"
                 />
                 <img
                   className=" w-8 h-8 my-3 mx-4"
-                  src="src\assets\logos\js.png"
+                  src="src\img\logos\js.png"
                   alt="js"
                 />
                 <img
                   className=" w-8 h-8 my-3 mx-4"
-                  src="src\assets\logos\programing.png"
+                  src="src\img\logos\programing.png"
                   alt="node"
                 />
                 <img
                   className=" w-8 h-8 my-3 mx-4"
-                  src="src\assets\logos\react.png"
+                  src="src\img\logos\react.png"
                   alt="react"
                 />
                 <img
                   className=" w-8 h-8 my-3 mx-4"
-                  src="src\assets\logos\sql-server.png"
+                  src="src\img\logos\sql-server.png"
                   alt="sql"
                 />
                 <img
                   className=" w-8 h-8my-1 mx-4"
-                  src="src\assets\logos\typescript.png"
+                  src="src\img\logos\typescript.png"
                   alt="ts"
                 />
               </div>
@@ -123,7 +123,7 @@ const BtnDrawer = () => {
                 <div className=" flex  my-7">
                   <img
                     className=" w-12 h-8"
-                    src="src\assets\logos\figma-759x500-removebg-preview.png"
+                    src="src\img\logos\figma-759x500-removebg-preview.png"
                     alt="figma"
                   />
                   <a
