@@ -8,7 +8,7 @@ const GameComponent: React.FC = () => {
     const canvas = canvasRef.current;
     if (canvas) {
       const script = document.createElement("script");
-      script.src = "../../game.js"; // Atualize com o caminho correto do seu script de jogo
+      script.src = "/game.js"; // Atualize com o caminho correto do seu script de jogo
       script.async = true;
       script.onload = () => {
         // Supondo que seu script de jogo tenha uma função init para inicializar o jogo

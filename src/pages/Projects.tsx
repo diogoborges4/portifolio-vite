@@ -7,7 +7,7 @@ const Projects = () => {
       content: "Site de e-commerce de roupas",
       headme:
         "Projeto inspirado em um e-commerce utilizando redux no React.js.",
-      bgImage: "src/assets/Captura de tela 2023-09-03 084910.png",
+      bgImage: "/Captura de tela 2023-09-03 084910.png",
       repoLink: "https://github.com/diogoborges4/Loja-Online-main",
       deployLink: "https://onlinestorev2.netlify.app",
     },
@@ -15,7 +15,7 @@ const Projects = () => {
       id: 2,
       content: "React-Gram",
       headme: "Projeto inspirado no instagram.",
-      bgImage: "src/assets/Captura de tela 2023-09-03 090910.png",
+      bgImage: "/Captura de tela 2023-09-03 090910.png",
       repoLink: "https://github.com/diogoborges4/reactGram",
       deployLink: "https://reactgramapp.netlify.app",
     },
@@ -24,7 +24,7 @@ const Projects = () => {
       content: "Elojobs",
       headme:
         "Projeto de um site para serviços de aumentar o elo no game League of Legends",
-      bgImage: "src/assets/Captura de tela 2024-03-18 095430.png",
+      bgImage: "/Captura de tela 2024-03-18 095430.png",
       repoLink:
         "https://app.rocketseat.com.br/certificates/56fb502b-aa76-4987-955b-e00b9dca104c",
       deployLink: "https://eloproject.netlify.app/",
@@ -33,7 +33,7 @@ const Projects = () => {
       id: 4,
       content: "Movie-Lib",
       headme: "Acervo de filmes feito em React utilizando API do TMDB.",
-      bgImage: "src/assets/Captura de tela 2024-03-18 153509.png",
+      bgImage: "/Captura de tela 2024-03-18 153509.png",
       repoLink: "https://github.com/diogoborges4/Lib_Movie",
       deployLink: "https://libmoviesx.netlify.app",
     },
@@ -42,7 +42,7 @@ const Projects = () => {
       content: "Finantial-app",
       headme:
         "Finance application made in React-native consuming an api-backend made in Node.js",
-      bgImage: "src/assets/Finantial-app Template2.png",
+      bgImage: "/Finantial-app Template2.png",
       repoLink: "https://github.com/diogoborges4/finantial-app",
       deployLink:
         "https://snack.expo.dev/@dborges4/github.com-diogoborges4-finantial-app?platform=android",
@@ -52,7 +52,7 @@ const Projects = () => {
       content: "Crud API em C#",
       headme:
         "Uma api Crud que conecta com um banco de dados em sqlite feito em C#",
-      bgImage: "src/assets/c_Sharp_pic.jpg",
+      bgImage: "/c_Sharp_pic.jpg",
       repoLink: "https://github.com/diogoborges4/ApiTesteCrud",
       deployLink: "https://github.com/diogoborges4/ApiTesteCrud",
     },
@@ -61,7 +61,7 @@ const Projects = () => {
       content: "Store App",
       headme:
         "Um aplicativo de loja feito em React-native que utiliza um api externa.",
-      bgImage: "src/assets/Finantial-app Template.png",
+      bgImage: "/Finantial-app Template.png",
       repoLink: "https://github.com/diogoborges4/store-app",
       deployLink:
         "https://snack.expo.dev/@dborges4/github.com-diogoborges4-store-app",

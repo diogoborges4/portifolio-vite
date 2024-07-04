@@ -38,49 +38,37 @@ const BtnDrawer = () => {
             <div className=" mt-2">
               <p>Habilidades</p>
               <div className=" flex flex-wrap mt-4">
+                <img className=" w-8 h-8 my-3 mx-4" src="/c-.png" alt="c#" />
+                <img className=" w-8 h-8 my-3 mx-4" src="/css3.png" alt="css" />
                 <img
                   className=" w-8 h-8 my-3 mx-4"
-                  src="src\assets\c-.png"
-                  alt="c#"
-                />
-                <img
-                  className=" w-8 h-8 my-3 mx-4"
-                  src="src\assets\css3.png"
-                  alt="css"
-                />
-                <img
-                  className=" w-8 h-8 my-3 mx-4"
-                  src="src\assets\Design_sem_nome-removebg-preview.png"
+                  src="/Design_sem_nome-removebg-preview.png"
                   alt="vite"
                 />
                 <img
                   className=" w-8 h-8 my-3 mx-4"
-                  src="src\assets\html-5.png"
+                  src="/html-5.png"
                   alt="html"
                 />
+                <img className=" w-8 h-8 my-3 mx-4" src="/js.png" alt="js" />
                 <img
                   className=" w-8 h-8 my-3 mx-4"
-                  src="src\assets\js.png"
-                  alt="js"
-                />
-                <img
-                  className=" w-8 h-8 my-3 mx-4"
-                  src="src\assets\programing.png"
+                  src="/programing.png"
                   alt="node"
                 />
                 <img
                   className=" w-8 h-8 my-3 mx-4"
-                  src="src\assets\react.png"
+                  src="/react.png"
                   alt="react"
                 />
                 <img
                   className=" w-8 h-8 my-3 mx-4"
-                  src="src\assets\sql-server.png"
+                  src="/sql-server.png"
                   alt="sql"
                 />
                 <img
                   className=" w-8 h-8my-1 mx-4"
-                  src="src\assets\typescript.png"
+                  src="/typescript.png"
                   alt="ts"
                 />
               </div>
@@ -123,7 +111,7 @@ const BtnDrawer = () => {
                 <div className=" flex  my-7">
                   <img
                     className=" w-12 h-8"
-                    src="src\assets\figma-759x500-removebg-preview.png"
+                    src="/figma-759x500-removebg-preview.png"
                     alt="figma"
                   />
                   <a
@@ -137,7 +125,7 @@ const BtnDrawer = () => {
                 <div className="flex ml-4 my-7">
                   <FileTextOutlined />
                   <a
-                    href="src\assets\curriculo dev.pdf"
+                    href="/curriculo dev.pdf"
                     target="norefer"
                     className=" ml-7  text-sm hover:text-sky-600"
                   >

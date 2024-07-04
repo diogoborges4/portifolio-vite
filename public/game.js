@@ -4,7 +4,7 @@ function initGame() {
   som_HIT.src = "./efeitos/hit.wav";
 
   const sprites = new Image();
-  sprites.src = "src/assets/sprites.png";
+  sprites.src = "/sprites.png";
 
   const canvas = document.querySelector("canvas");
   const contexto = canvas.getContext("2d");
