@@ -1,36 +1,46 @@
-import BtnDrawer from "../components/BtnDrawer";
+import { GithubOutlined, GlobalOutlined } from "@ant-design/icons";
+import ScrollReveal from "../components/ScrollReveal";
 
 const Projects = () => {
   const cards = [
     {
       id: 1,
-      content: "Site de e-commerce de roupas",
+      content: "Warna",
       headme:
-        "Projeto inspirado em um e-commerce utilizando redux no React.js.",
-      bgImage: "/Captura de tela 2023-09-03 084910.png",
-      repoLink: "https://github.com/diogoborges4/Loja-Online-main",
-      deployLink: "https://onlinestorev2.netlify.app",
+        "Warna é uma landing page completa e moderna de produtos para festas.",
+      bgImage: "/warna-app.png",
+      repoLink: "https://github.com/diogoborges4/warna-landing-page",
+      deployLink: "https://warna-landing-page.vercel.app/",
     },
     {
       id: 2,
-      content: "React-Gram",
-      headme: "Projeto inspirado no instagram.",
-      bgImage: "/Captura de tela 2023-09-03 090910.png",
-      repoLink: "https://github.com/diogoborges4/reactGram",
-      deployLink: "https://reactgramapp.netlify.app",
+      content: "Euphoria",
+      headme:
+        "Euphoria é um e-commerce de roupas desenvovido em React.js.",
+      bgImage: "/Euphoria-app.png",
+      repoLink: "https://github.com/diogoborges4/Euphoria_Store",
+      deployLink: "https://euphoria-storee.netlify.app/",
     },
     {
       id: 3,
-      content: "Elojobs",
-      headme:
-        "Projeto de um site para serviços de aumentar o elo no game League of Legends",
-      bgImage: "/Captura de tela 2024-03-18 095430.png",
-      repoLink:
-        "https://app.rocketseat.com.br/certificates/56fb502b-aa76-4987-955b-e00b9dca104c",
-      deployLink: "https://eloproject.netlify.app/",
+      content: "Flikka",
+      headme: "Flikka é um projeto de rede social desenvovido em React.js.",
+      bgImage: "/flikka-app.png",
+      repoLink: "https://github.com/diogoborges4/Flikka",
+      deployLink: "https://flikka.netlify.app/",
     },
     {
       id: 4,
+      content: "Elojobs",
+      headme:
+        "Projeto de uma landing page de serviços de aumentar o elo no game League of Legends",
+      bgImage: "/elojobs-pp.png",
+      repoLink:
+        "https://github.com/diogoborges4/project-elojob",
+      deployLink: "https://eloproject.netlify.app/",
+    },
+    {
+      id: 5,
       content: "Movie-Lib",
       headme: "Acervo de filmes feito em React utilizando API do TMDB.",
       bgImage: "/Captura de tela 2024-03-18 153509.png",
@@ -38,7 +48,7 @@ const Projects = () => {
       deployLink: "https://libmoviesx.netlify.app",
     },
     {
-      id: 5,
+      id: 6,
       content: "Finantial-app",
       headme:
         "Finance application made in React-native consuming an api-backend made in Node.js",
@@ -48,7 +58,7 @@ const Projects = () => {
         "https://snack.expo.dev/@dborges4/github.com-diogoborges4-finantial-app?platform=android",
     },
     {
-      id: 6,
+      id: 7,
       content: "Crud API em C#",
       headme:
         "Uma api Crud que conecta com um banco de dados em sqlite feito em C#",
@@ -57,7 +67,7 @@ const Projects = () => {
       deployLink: "https://github.com/diogoborges4/ApiTesteCrud",
     },
     {
-      id: 7,
+      id: 8,
       content: "Store App",
       headme:
         "Um aplicativo de loja feito em React-native que utiliza um api externa.",
@@ -67,60 +77,70 @@ const Projects = () => {
         "https://snack.expo.dev/@dborges4/github.com-diogoborges4-store-app",
     },
   ];
-  return (
-    <>
-      <BtnDrawer />
 
-      <div className="fade-in flex flex-wrap mt-24 pl-4 max-[410px]:pl-0">
-        {cards.map((item) => (
-          <div
-            key={item.id}
-            className="w-[340.35px] h-[422px] max-[410px]:w-[270px] mx-5 max-[420px]:mx-0 z-10"
-          >
-            <div className="w-[370.35px] h-[422px] max-[410px]:w-[290px] relative">
-              <div className=" ">
-                <span className="text-indigo-500 text-base font-bold font-['Fira Code']">
-                  Project {item.id}{" "}
-                </span>
-                <span className="text-slate-500 text-base font-['Fira Code']">
-                  //
-                </span>
-                <span className="text-indigo-500 text-base font-bold font-['Fira Code']">
-                  {" "}
-                </span>
-                <span className="text-slate-500 text-base font-['Fira Code']">
-                  {item.content}
-                </span>
+  return (
+    <section id="projects" className="min-h-screen pt-24 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <ScrollReveal>
+        <div className="mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-white font-['Fira Code'] mb-2">
+            <span className="text-indigo-500">_</span>projects
+          </h2>
+          <p className="text-slate-400">// Alguns dos meus trabalhos recentes</p>
+        </div>
+      </ScrollReveal>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {cards.map((item, index) => (
+          <ScrollReveal key={item.id} delay={index * 150}>
+            <div
+              className="glass rounded-xl overflow-hidden group hover:border-indigo-500/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)] transition-all duration-500 flex flex-col h-full bg-slate-900/50"
+            >
+              <div className="relative h-48 overflow-hidden border-b border-white/10">
+                <div className="absolute inset-0 bg-indigo-500/20 group-hover:bg-transparent transition-colors z-10 duration-500"></div>
+                <img
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out"
+                  src={item.bgImage}
+                  alt={item.content}
+                />
               </div>
-              <div className="w-[370.35px] h-[314.82px] max-[510px]:w-[290px] left-0 top-16 absolute bg-slate-950 rounded-[15px] border border-slate-800" />
-              <img
-                className="w-[370.35px] h-[145.44px] max-[510px]:w-[290px] bg-cover left-0 top-16 absolute rounded-tl-[15px] rounded-tr-[15px] border border-slate-800"
-                src={item.bgImage}
-              />
-              <div className="w-[304.69px] left-[20px] top-[230.44px]  max-[510px]:w-[290px] max-[510px]:left-0 absolute mb-1 text-slate-500 text-lg font-['Fira Code'] leading-[27px]">
-                {item.headme}
-              </div>
-              <div className="px-3.5 py-2.5 left-[31px] top-[320.26px] max-[510px]:w-[290px] max-[510px]:left-0 absolute bg-slate-800 hover:bg-slate-500 ease-in-out duration-1000 rounded-lg justify-center items-center gap-2.5 inline-flex">
-                <a
-                  href={item.deployLink}
-                  target="norefer"
-                  className=" mr-20 text-right text-white text-sm font-['Fira Code']"
-                >
-                  ver projeto
-                </a>
-                <a
-                  href={item.repoLink}
-                  target="norefer"
-                  className="text-right text-white text-sm font-['Fira Code']"
-                >
-                  repositório
-                </a>
+              
+              <div className="p-6 flex flex-col flex-1">
+                <div className="mb-4">
+                  <span className="text-indigo-400 text-sm font-bold font-['Fira Code'] uppercase tracking-wider">
+                    Project {item.id}
+                  </span>
+                  <h3 className="text-xl font-bold text-white mt-1 mb-2 line-clamp-1">
+                    {item.content}
+                  </h3>
+                  <p className="text-slate-400 text-sm font-['Inter'] line-clamp-3 leading-relaxed">
+                    {item.headme}
+                  </p>
+                </div>
+                
+                <div className="mt-auto pt-4 border-t border-white/10 flex gap-3">
+                  <a
+                    href={item.deployLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 py-2 px-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg transition-colors text-sm font-medium shadow-lg shadow-indigo-500/30"
+                  >
+                    <GlobalOutlined /> Preview
+                  </a>
+                  <a
+                    href={item.repoLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 py-2 px-4 glass hover:bg-white/10 text-white rounded-lg transition-colors text-sm font-medium"
+                  >
+                    <GithubOutlined /> Code
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         ))}
       </div>
-    </>
+    </section>
   );
 };
 

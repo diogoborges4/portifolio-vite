@@ -1,4 +1,3 @@
-// src/components/VerticalSlider.tsx
 import { DownOutlined, UpOutlined } from "@ant-design/icons";
 import React, { useState, useEffect, useRef } from "react";
 import "tailwindcss/tailwind.css";
@@ -65,47 +64,58 @@ const VerticalSlider: React.FC = () => {
   }, [currentIndex]);
 
   return (
-    <>
-      <div className="absolute z-20  top-60 right-52 max-[1240px]:relative max-[1240px]:left-2 max-[1240px]:top-0  ">
-        <h1 className="">Minhas Certificações</h1>
+    <div className="flex flex-col h-full w-full relative items-center justify-center">
+      
+      <div className="mb-2 text-slate-400 font-['Inter'] text-sm tracking-wider uppercase font-semibold">
+        Minhas Certificações
       </div>
-      <div className="absolute max-[1240px]:relative max-[1240px]:top-0 max-[1240px]:left-9 max-[540px]:left-4 top-96 right-44 w-64 h-64 overflow-hidden">
+
+      <button
+        className="absolute top-8 z-20 bg-indigo-600/80 hover:bg-indigo-500 text-white w-8 h-8 flex items-center justify-center rounded-full shadow-lg backdrop-blur-sm transition-colors border border-white/10"
+        onClick={handlePrev}
+      >
+        <UpOutlined className="text-xs" />
+      </button>
+
+      <div className="relative w-full max-w-xs h-64 overflow-hidden mt-6 mb-6 rounded-xl">
         <div
           ref={containerRef}
-          className="flex flex-col h-full overflow-hidden transition-all duration-500 ease-in-out"
+          className="flex flex-col h-full overflow-hidden transition-all duration-500 ease-in-out hide-scrollbar"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {cards.map((card, index) => (
             <div
               key={card.id}
-              className={`flex items-center justify-center h-full transition-opacity duration-500 ease-in-out ${
-                index === currentIndex ? "opacity-100" : "opacity-40"
+              className={`flex-shrink-0 flex flex-col items-center justify-center w-full h-full p-2 transition-opacity duration-500 ease-in-out ${
+                index === currentIndex ? "opacity-100" : "opacity-30"
               }`}
             >
-              <div className="w-64 h-64 bg-blue-800 text-white px-1 text-sm flex flex-col items-center justify-center rounded-lg shadow-lg">
-                {card.content}
-                <a className=" z-20 mt-2" target="norefer" href={card.certLink}>
-                  <img src={card.bgImage} alt="bgImg" />
+              <div className="w-full h-full glass border border-white/10 text-white p-4 flex flex-col items-center justify-center rounded-xl shadow-2xl hover:border-indigo-500/50 transition-colors">
+                <span className="text-center font-semibold text-sm mb-3 font-['Inter'] text-slate-200">
+                  {card.content}
+                </span>
+                <a 
+                  className="z-20 block overflow-hidden rounded-lg border border-white/5 shadow-md transform hover:scale-105 transition-transform" 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  href={card.certLink}
+                >
+                  <img src={card.bgImage} alt={card.content} className="w-full h-auto object-cover max-h-32" />
                 </a>
               </div>
             </div>
           ))}
         </div>
       </div>
-      <div className="absolute w-64  h-96 top-40 right-44 max-[1240px]:relative max-[1240px]:left-8 max-[1240px]:-top-32">
-        <button
-          className="absolute top-40 right-24 bg-gray-500 text-white px-4 py-2 rounded"
-          onClick={handlePrev}
-        >
-          <UpOutlined />
-        </button>
-        <button
-          className="absolute -bottom-40 right-24 bg-gray-500 text-white max-[1240px]:relative px-4 py-2 rounded"
-          onClick={handleNext}
-        >
-          <DownOutlined />
-        </button>
-      </div>
-    </>
+
+      <button
+        className="absolute bottom-4 z-20 bg-indigo-600/80 hover:bg-indigo-500 text-white w-8 h-8 flex items-center justify-center rounded-full shadow-lg backdrop-blur-sm transition-colors border border-white/10"
+        onClick={handleNext}
+      >
+        <DownOutlined className="text-xs" />
+      </button>
+      
+    </div>
   );
 };
 

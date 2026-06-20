@@ -20,132 +20,94 @@ const BtnDrawer = () => {
 
   return (
     <>
-      <div className="">
+      <Navbarr />
+      <div>
         <div
-          className={`absolute z-40 transition-transform duration-500 ease-in-out ${
-            isDrawerOpen ? "translate-x-80" : "translate-x-0"
+          className={`fixed top-24 z-40 transition-transform duration-500 ease-in-out ${
+            isDrawerOpen ? "translate-x-[22rem]" : "translate-x-0"
           }`}
         >
           <button
-            className="absolute z-20 mt-3 px-4 py-2 bg-transparent  text-gray-600 rounded border border-gray-500 mr-4 hover:bg-indigo-600 hover:text-white"
+            className="absolute left-0 mt-3 px-3 py-2 glass text-slate-300 rounded-r-lg border-y border-r border-white/10 shadow-lg hover:bg-indigo-600/80 hover:text-white hover:border-indigo-500 transition-all duration-300"
             onClick={toggleDrawer}
+            aria-label="Toggle Skills Drawer"
           >
-            {isDrawerOpen ? <DoubleLeftOutlined /> : <DoubleRightOutlined />}
+            {isDrawerOpen ? <DoubleLeftOutlined className="text-xl" /> : <DoubleRightOutlined className="text-xl" />}
           </button>
         </div>
         <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer}>
-          <div className="">
-            <div className=" mt-2">
-              <p>Habilidades</p>
-              <div className=" flex flex-wrap mt-4">
-                <img className=" w-8 h-8 my-3 mx-4" src="/c-.png" alt="c#" />
-                <img className=" w-8 h-8 my-3 mx-4" src="/css3.png" alt="css" />
-                <img
-                  className=" w-8 h-8 my-3 mx-4"
-                  src="/Design_sem_nome-removebg-preview.png"
-                  alt="vite"
-                />
-                <img
-                  className=" w-8 h-8 my-3 mx-4"
-                  src="/html-5.png"
-                  alt="html"
-                />
-                <img className=" w-8 h-8 my-3 mx-4" src="/js.png" alt="js" />
-                <img
-                  className=" w-8 h-8 my-3 mx-4"
-                  src="/programing.png"
-                  alt="node"
-                />
-                <img
-                  className=" w-8 h-8 my-3 mx-4"
-                  src="/react.png"
-                  alt="react"
-                />
-                <img
-                  className=" w-8 h-8 my-3 mx-4"
-                  src="/sql-server.png"
-                  alt="sql"
-                />
-                <img
-                  className=" w-8 h-8my-1 mx-4"
-                  src="/typescript.png"
-                  alt="ts"
-                />
+          <div className="h-full flex flex-col font-['Inter'] text-slate-300">
+            <div className="mt-4">
+              <h3 className="text-lg font-semibold text-white mb-4 border-b border-white/10 pb-2">Habilidades</h3>
+              <div className="grid grid-cols-4 gap-4 p-2 bg-black/20 rounded-xl border border-white/5">
+                <img className="w-10 h-10 object-contain hover:scale-110 transition-transform cursor-help" src="/c-.png" alt="C#" title="C#" />
+                <img className="w-10 h-10 object-contain hover:scale-110 transition-transform cursor-help" src="/css3.png" alt="CSS3" title="CSS3" />
+                <img className="w-10 h-10 object-contain hover:scale-110 transition-transform cursor-help" src="/Design_sem_nome-removebg-preview.png" alt="Vite" title="Vite" />
+                <img className="w-10 h-10 object-contain hover:scale-110 transition-transform cursor-help" src="/html-5.png" alt="HTML5" title="HTML5" />
+                <img className="w-10 h-10 object-contain hover:scale-110 transition-transform cursor-help" src="/js.png" alt="JavaScript" title="JavaScript" />
+                <img className="w-10 h-10 object-contain hover:scale-110 transition-transform cursor-help" src="/programing.png" alt="Node.js" title="Node.js" />
+                <img className="w-10 h-10 object-contain hover:scale-110 transition-transform cursor-help" src="/react.png" alt="React" title="React" />
+                <img className="w-10 h-10 object-contain hover:scale-110 transition-transform cursor-help" src="/sql-server.png" alt="SQL Server" title="SQL Server" />
+                <img className="w-10 h-10 object-contain hover:scale-110 transition-transform cursor-help" src="/typescript.png" alt="TypeScript" title="TypeScript" />
               </div>
-              <div className=" my-6">
-                <p>Contatos</p>
-                <div className=" flex justify-around my-7">
-                  <MailOutlined />
-                  <h6 className=" text-sm">diogoborges9804@gmail.com</h6>
+            </div>
+            
+            <div className="mt-8 flex-1">
+              <h3 className="text-lg font-semibold text-white mb-4 border-b border-white/10 pb-2">Contatos</h3>
+              <div className="flex flex-col gap-5 p-2">
+                <div className="flex items-center text-slate-300 group">
+                  <div className="w-10 h-10 rounded-full bg-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-500 group-hover:text-white transition-colors">
+                    <MailOutlined className="text-xl" />
+                  </div>
+                  <a href="mailto:diogoborges9804@gmail.com" className="ml-4 text-sm hover:text-indigo-400 transition-colors">diogoborges9804@gmail.com</a>
                 </div>
-                <div className=" flex ml-4 my-7">
-                  <WhatsAppOutlined />
-                  <a
-                    href="https://wa.me/48991602597/"
-                    target="norefer"
-                    className=" ml-7 text-sm hover:text-warning-500"
-                  >
-                    (48) 991602597
-                  </a>
+                
+                <div className="flex items-center text-slate-300 group">
+                  <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                    <WhatsAppOutlined className="text-xl" />
+                  </div>
+                  <a href="https://wa.me/5548991602597" target="_blank" rel="noreferrer" className="ml-4 text-sm hover:text-emerald-400 transition-colors">(48) 991602597</a>
                 </div>
-                <div className=" flex ml-4 my-7">
-                  <GithubOutlined />
-                  <a
-                    href="https://github.com/diogoborges4"
-                    target="norefer"
-                    className=" ml-7 text-sm hover:text-warning-accent-300"
-                  >
-                    Repositórios
-                  </a>
+                
+                <div className="flex items-center text-slate-300 group">
+                  <div className="w-10 h-10 rounded-full bg-slate-500/20 flex items-center justify-center text-slate-300 group-hover:bg-slate-500 group-hover:text-white transition-colors">
+                    <GithubOutlined className="text-xl" />
+                  </div>
+                  <a href="https://github.com/diogoborges4" target="_blank" rel="noreferrer" className="ml-4 text-sm hover:text-slate-300 transition-colors">GitHub Profile</a>
                 </div>
-                <div className=" flex ml-4 my-7">
-                  <LinkedinOutlined />
-                  <a
-                    href="https://www.linkedin.com/in/diogo-borges-bernardo/"
-                    target="norefer"
-                    className=" ml-7 text-sm hover:text-sky-600"
-                  >
-                    LinkedIn
-                  </a>
+                
+                <div className="flex items-center text-slate-300 group">
+                  <div className="w-10 h-10 rounded-full bg-sky-500/20 flex items-center justify-center text-sky-400 group-hover:bg-sky-500 group-hover:text-white transition-colors">
+                    <LinkedinOutlined className="text-xl" />
+                  </div>
+                  <a href="https://www.linkedin.com/in/diogo-borges-bernardo/" target="_blank" rel="noreferrer" className="ml-4 text-sm hover:text-sky-400 transition-colors">LinkedIn Profile</a>
                 </div>
-                <div className=" flex  my-7">
-                  <img
-                    className=" w-12 h-8"
-                    src="/figma-759x500-removebg-preview.png"
-                    alt="figma"
-                  />
-                  <a
-                    href="https://www.figma.com/@diogoborges"
-                    target="norefer"
-                    className=" ml-4 mt-1 text-sm hover:text-sky-600"
-                  >
-                    Figma
-                  </a>
+                
+                <div className="flex items-center text-slate-300 group">
+                  <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 group-hover:bg-purple-500 group-hover:text-white transition-colors p-2">
+                    <img className="w-full h-full object-contain filter brightness-0 invert" src="/figma-759x500-removebg-preview.png" alt="Figma" />
+                  </div>
+                  <a href="https://www.figma.com/@diogoborges" target="_blank" rel="noreferrer" className="ml-4 text-sm hover:text-purple-400 transition-colors">Figma Designs</a>
                 </div>
-                <div className="flex ml-4 my-7">
-                  <FileTextOutlined />
-                  <a
-                    href="/curriculo dev.pdf"
-                    target="norefer"
-                    className=" ml-7  text-sm hover:text-sky-600"
-                  >
-                    Meu Currículo
-                  </a>
+                
+                <div className="flex items-center text-slate-300 group">
+                  <div className="w-10 h-10 rounded-full bg-rose-500/20 flex items-center justify-center text-rose-400 group-hover:bg-rose-500 group-hover:text-white transition-colors">
+                    <FileTextOutlined className="text-xl" />
+                  </div>
+                  <a href="/curriculo dev.pdf" target="_blank" rel="noreferrer" className="ml-4 text-sm hover:text-rose-400 transition-colors">Meu Currículo</a>
                 </div>
               </div>
             </div>
           </div>
         </Drawer>
       </div>
-      <Navbarr />
-      <div className=" absolute" onClick={toggleDrawer}>
-        {isDrawerOpen && (
-          <button
-            className=" fixed z-30  inset-0 w-full h-full duration-500 ease-in-out bg-black opacity-50"
-            onClick={toggleDrawer}
-          ></button>
-        )}
-      </div>
+      
+      {isDrawerOpen && (
+        <div 
+          className="fixed inset-0 z-30 bg-black/60 backdrop-blur-sm transition-opacity duration-500"
+          onClick={toggleDrawer}
+        ></div>
+      )}
     </>
   );
 };

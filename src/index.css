@@ -1,31 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+}
+
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .fade-in {
-  animation: fadeIn 2s ease-in-out;
+  animation: fadeIn 1s ease-out forwards;
 }
 
 :root {
-  font-family: "Fira code", Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
+  font-family: "Inter", "Fira Code", system-ui, -apple-system, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #011627;
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #050b14;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050b14; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155; 
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569; 
 }
